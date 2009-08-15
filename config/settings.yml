@@ -1,0 +1,11 @@
+payment:
+  sberbank:
+    bik: "044525787"
+    corr: "30101810100000000787"
+    inn: "7701512070"
+    kpp: "770101001"
+    recipient: "ООО «Ортомед»"
+    recipient_bank: "ОАО «УРАЛСИБ»"
+    recipient_bank_city: "Москва"
+    settlement_acc: "40702810300022001677"
+

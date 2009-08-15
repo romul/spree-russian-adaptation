@@ -1,0 +1,9 @@
+---
+ru-RU:
+  actions:
+    add_to_cart: "Добавить в корзину"
+    add_to_comparison: "Добавить к сравнению"
+  bestsellers: "Товары месяца"
+  is_bestseller: "является товаром месяца"
+  more: "подробности"  
+  second_name: "Отчество"

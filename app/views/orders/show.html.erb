@@ -1,0 +1,21 @@
+<div id="order">
+  <%= link_to t('back_to_store'), products_path %> 
+
+  <% if params.has_key? :checkout_complete %>
+  	<br/><br/>
+  	<h3><%= t('thank_you_for_your_order') %></h3>         
+  	<% if Spree::Config[:google_analytics_id] and not %w{development test}.include? RAILS_ENV %>
+  	  <%= render :partial => "orders/google_order", :locals => {:order => @order} %>
+  	<% end %>
+  <% else %>
+  	| <%= link_to t('my_account'), user_path(current_user) if current_user%>
+  <% end %>
+  <br/><br/>
+
+  <%= render :partial => 'shared/order_details', :locals => {:order => @order} -%>
+
+  <br/>
+  <% if (@order.shipping_method.name =~ /предопл/ && @order.user && current_user.email == @order.user.email) %>
+    <%= link_to 'Распечатать счёт на оплату', url_for(:action => 'sberbank_billing', :id => @order), :target => '_blank' %>
+  <% end %>  
+</div>
