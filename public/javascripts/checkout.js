@@ -10,7 +10,7 @@ $(function() {
   // hook up the continue buttons for each section
   for(var i=0; i < regions.length; i++) {     
     var section = regions[i];                          
-    $('#continue_' + section).click(function() { eval( "continue_button(this);") });   
+    $('#continue_' + section).click(function() { eval( "continue_button(this);"); return false; });
     
     // enter key should be same as continue button (don't submit form though)
     $('#' + section + ' input').bind("keyup", section, function(e) {
@@ -55,34 +55,36 @@ jQuery.fn.sameAddress = function() {
 //Initial state mapper on page load
 var state_mapper;
 var get_states = function() {
-  $.getJSON('/states.js', function(json) {
-    state_mapper = json;
-    $('span#bcountry select').val($('input#hidden_bcountry').val());
-    update_state('b');
-    $('span#bstate :only-child').val($('input#hidden_bstate').val());
-    $('span#scountry select').val($('input#hidden_scountry').val());
-    update_state('s');
-    $('span#sstate :only-child').val($('input#hidden_sstate').val());
-  });
+  $('span#bcountry select').val($('input#hidden_bcountry').val());
+  update_state('b');
+  $('span#bstate :only-child').val($('input#hidden_bstate').val());
+  $('span#scountry select').val($('input#hidden_scountry').val());
+  update_state('s');
+  $('span#sstate :only-child').val($('input#hidden_sstate').val());
 };
 
 // replace the :only child of the parent with the given html, and transfer
 //   {name,id} attributes over, returning the new child
 var chg_state_input_element = function (parent, html) {
+  var errorlabel = parent.find('label');
+  errorlabel.remove();
   var child = parent.find(':only-child');
   var name = child.attr('name');
   var id = child.attr('id');
   //Toggle back and forth between id and name
-  if(html.attr('type') == 'text' && child.attr('type') != 'text') {
-    name = name.replace('_id', '_name');
-    id = id.replace('_id', '_name');
-  } else if(html.attr('type') != 'text' && child.attr('type') == 'text') {
-    name = name.replace('_name', '_id');
-    id = id.replace('_name', '_id');
-  }
-  html.addClass('required')
+  if (name)
+  {
+      if(html.attr('type') == 'text' && child.attr('type') != 'text') {
+        name = name.replace('_id', '_name');
+        id = id.replace('_id', '_name');
+      } else if(html.attr('type') != 'text' && child.attr('type') == 'text') {
+        name = name.replace('_name', '_id');
+        id = id.replace('_name', '_id');
+      }
+    html.addClass('required')
       .attr('name', name)
       .attr('id',   id);
+  }    
   child.remove();		// better as parent-relative?
   parent.append(html);
   return html;
@@ -179,11 +181,11 @@ var shift_to_region = function(active) {
     }
   }                                                                         
   if (active == 'confirmation') {
+    // indicates order is ready to be processed (as opposed to simply updated)
     $("input#final_answer").attr("value", "yes");    
     $('#continue_confirmation').removeAttr('disabled', 'disabled'); 
     $('#post-final').removeAttr('disabled', 'disabled'); 
   } else {
-    // indicates order is ready to be processed (as opposed to simply updated)
     $("input#final_answer").attr("value", "");
     // disable form submit
     $('div#checkout :submit').attr('disabled', 'disabled');
@@ -366,6 +368,7 @@ var ajax_login = function() {
       if (result) {
         $('div#already_logged_in').show();
         $('div#register_or_guest').hide();
+        update_addresses(result);
         update_login();
       } else {
         registration_error("Invalid username or password.");
@@ -429,7 +432,7 @@ var update_login = function() {
     },      
     dataType: "html",
     success: function(result) {
-	 		$("div#login-bar").html(result);  
+      $("div#login-bar").html(result);
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
       // TODO (maybe do nothing)
