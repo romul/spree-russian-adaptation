@@ -1,0 +1,11 @@
+<html>
+<body>
+  <%= render :partial => 'shared/order_details', :locals => {:order => @order} -%>
+
+  <br/>
+  <% if (@order.shipping_method.name =~ /предопл/) %>
+    <%= link_to 'Распечатать счёт на оплату', url_for(:action => 'sberbank_billing', :id => @order), :target => '_blank' %>
+  <% end %>
+</body>
+</html>
+
