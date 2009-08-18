@@ -39,11 +39,11 @@ class RussianAdaptationExtension < Spree::Extension
 
           set_address(@checkout.bill_address,
                       checkout_info[:bill_address_attributes],
-                      current_user.bill_address)
+                      current_user ? current_user.bill_address : nil)
 
           set_address(@order.shipment.address,
                       checkout_info[:shipment_attributes][:address_attributes],
-                      current_user.ship_address)
+                      current_user ? current_user.ship_address : nil)
         end
         @order.complete! unless params[:final_answer].blank?
       end
