@@ -59,7 +59,7 @@ margin:3px 0 10px;}
         <td width="" valign="bottom"><%= @order.total.to_i %>&nbsp;руб.&nbsp;00&nbsp;коп.</td>
       </tr>
       <tr>
-        <td colspan="3" valign="center"><br><small>Плательщик (ФИО, подпись):</small>&nbsp;<em><%= @order.ship_address.lastname %>&nbsp;<%= @order.ship_address.firstname.split.collect { |s| [s[0..1], '. '].join } %></em></td>
+        <td colspan="3" valign="center"><br><small>Плательщик (ФИО, подпись):</small>&nbsp;<em><%= @order.ship_address.lastname %>&nbsp;<%= [@order.shipment.address.firstname[0..1], @order.shipment.address.secondname[0..1] ].join('. ') } %></em></td>
       </tr>
     </table>
     </td>
