@@ -1,10 +1,10 @@
 ---
-ru-RU: 
+ru-RU:
   a_copy_of_all_mail_will_be_sent_to_the_following_addresses: "Копии всех писем будут отосланы на следующие адреса"
   abbreviation: "Аббревиатура"
   access_denied: "Доступ запрещен"
   account: "Учетная запись"
-  account_updated: "Учетная запись обновлена!"        
+  account_updated: "Учетная запись обновлена!"
   action: "Действие"
   actions:
     cancel: "Отменить"
@@ -67,7 +67,7 @@ ru-RU:
       state:
         abbr: "Аббревиатура"
         name: "Название"
-      tax_category: 
+      tax_category:
         description: "Описание"
         name: "Наименование"
       tax_rate:
@@ -130,18 +130,18 @@ ru-RU:
       role:
         one: "Роль"
         other: "Роли"
-      shipping_category: 
+      shipping_category:
         one: "Категория доставки"
         other: "Категории доставки"
       state:
         one: "Статус"
         other: "Статусы"
-      tax_category: 
+      tax_category:
         one: "Налоговая категория"
         other: "Налоговые категории"
-      tax_rate: 
+      tax_rate:
         one: "Налоговая ставка"
-        other: "Налоговые ставки"        
+        other: "Налоговые ставки"
       taxon:
         one: "Таксон"
         other: "Таксоны"
@@ -229,7 +229,7 @@ ru-RU:
   copy_all_mails_to: "Копировать все письма на"
   country: "Страна"
   country_based: "Страна"
-  coupon: "Купон"                                                                             
+  coupon: "Купон"
   coupons: "Купоны"
   coupons_description: "Управление купонами"
   create: "Создать"
@@ -282,14 +282,14 @@ ru-RU:
   filename: "Имя файла"
   final_confirmation: "Окончательное подтверждение"
   first_name: "Имя"
-  flat_percent: "Обычный процент"
+  flat_percent: "Фиксированный процент"
   flat_rate_amount: "Сумма фиксированной ставки"
   flat_rate_per_item: "Фиксированная ставка (за наименование)"
   flat_rate_per_order: "Фиксированная ставка (за заказ)"
   flexible_rate: "Гибкая ставка"
   forgot_password: "Напомнить пароль"
   full_name: "Полное имя"
-  gateway: "Платежный шлюз" 
+  gateway: "Платежный шлюз"
   gateway_configuration: "Настройка платёжных шлюзов"
   gateway_error: "Ошибка платежного шлюза"
   gateway_setting_description: "Выберите платежный шлюз и настройте его."
@@ -334,9 +334,9 @@ ru-RU:
   log_in: "Вход для клиентов"
   logged_in_as: "Пользователь"
   logged_in_succesfully: "Вы вошли в систему"
-  logged_out: "Вы вышли из системы." 
-  login_as_existing: "Войти как покупатель" 
-  login_failed: "Вход не выполнен."      
+  logged_out: "Вы вышли из системы."
+  login_as_existing: "Войти как покупатель"
+  login_failed: "Вход не выполнен."
   login_name: "Логин"
   logout: "Выйти"
   maestro_or_solo_cards: "Кредитные карты Maestro/Solo"
@@ -411,8 +411,8 @@ ru-RU:
   password: "Пароль"
   password_reset_instructions: "Инструкция по восстановлению пароля"
   password_reset_instructions_are_mailed: "Инструкция по восстановлению пароля отправлена на ваш email. Пожалуйста, проверьте ваш email."
-  password_reset_token_not_found: "Извините, но ваша учётная запись не найдена. Если у Вас возникли вопросы, попробуйте скопировать и вставить URL, присланный по электронной почте, в ваш браузер или перезапустить процесс сброса пароля."    
-  password_updated: "Пароль успешно обновлён"  
+  password_reset_token_not_found: "Извините, но ваша учётная запись не найдена. Если у Вас возникли вопросы, попробуйте скопировать и вставить URL, присланный по электронной почте, в ваш браузер или перезапустить процесс сброса пароля."
+  password_updated: "Пароль успешно обновлён"
   path: "Путь"
   pay: "оплатить"
   payment: "Платеж"
@@ -421,7 +421,7 @@ ru-RU:
   payments: "Платежи"
   phone: "Телефон"
   place_order: "Разместить заказ"
-  please_create_user: "Пожалуйста, создайте учётную запись."     
+  please_create_user: "Пожалуйста, создайте учётную запись."
   powered_by: "Работает на"
   presentation: "Отображение"
   previous: "пред."
@@ -484,7 +484,7 @@ ru-RU:
   shipping_address: "Адрес доставки"
   shipping_categories: "Категории доставки"
   shipping_categories_description: "Настройка категорий доставки - укажите, какие продукты могут быть доставлены какими способами"
-  shipping_category: "Категория доставки"  
+  shipping_category: "Категория доставки"
   shipping_cost: "Стоимость"
   shipping_error: "Ошибка при доставке"
   shipping_instructions: "Иструкции по доставке"
@@ -492,7 +492,7 @@ ru-RU:
   shipping_methods: "Способы доставки"
   shipping_methods_description: "Управление методами доставки"
   shipping_rates: "Ставки стоимости доставки"
-  shipping_rates_description: "Управление ставками стоимости доставки"  
+  shipping_rates_description: "Управление ставками стоимости доставки"
   shipping_total: "Доставка"
   shop_by_taxonomy: "{{taxonomy}}"
   shopping_cart: "Корзина"
@@ -513,7 +513,7 @@ ru-RU:
   smtp_port: "Порт"
   smtp_send_all_emails_as_from_following_address: "Отправлять все сообщения от этого адреса."
   smtp_send_copy_of_orders_to_this_addresses: "Отправлять копии всех заказов на этот адрес. Для использования нескольких адресов разделите их запятой."
-  smtp_send_copy_to_this_addresses: "Отправлять копии всех сообщений на этот адрес. Для использования нескольких адресов разделите их запятой." 
+  smtp_send_copy_to_this_addresses: "Отправлять копии всех сообщений на этот адрес. Для использования нескольких адресов разделите их запятой."
   smtp_send_order_mails_as_from_following_address: "Отправлять уведомления о заказах от этого адреса."
   smtp_username: "Пользователь"
   spree:
@@ -570,7 +570,7 @@ ru-RU:
   unable_to_save_order: "Не удалось сохранить заказ"
   unrecognized_card_type: "Неизвестный тип карты"
   update: "Изменить"
-  update_password: "Обновить мой пароль и войти"                    
+  update_password: "Обновить мой пароль и войти"
   updated_successfully: "Запись успешна изменена"
   updating: "Обновление"
   usage_limit: "Максимальное количество использований"
@@ -583,7 +583,7 @@ ru-RU:
   users: "Пользователи"
   value: "Значение"
   variants: "Варианты"
-  vat: "НДС" 
+  vat: "НДС"
   version: "Версия"
   website: "Сайт"
   weight: "Вес"
@@ -601,3 +601,4 @@ ru-RU:
   zone_based: "состоит из других зон"
   zone_setting_description: "Список стран, областей и других георгафических зон."
   zones: "Зоны"
+
