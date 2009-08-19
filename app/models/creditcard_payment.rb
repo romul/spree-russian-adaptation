@@ -1,3 +1,0 @@
-class CreditcardPayment < Payment
-end
-
