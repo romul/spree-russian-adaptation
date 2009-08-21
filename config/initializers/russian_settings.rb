@@ -11,7 +11,4 @@ if Spree::Config.instance
   Spree::Config.set(:auto_capture => false)
 end
 
-CalendarDateSelect.format = :euro_24hr
-
 PAYMENT_CONFIG = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'settings.yml'))['payment']
-
