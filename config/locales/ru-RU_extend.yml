@@ -2,7 +2,7 @@
 ru-RU:
   actions:
     add_to_cart: "Добавить в корзину"
-    add_to_comparison: "Добавить к сравнению"
+    add_to_comparison: "Добавить к сравнению" 
   bestsellers: "Товары месяца"
   coupon_calculator: "Калькулятор скидки"
   "Edit Taxonomy": "Редактировать таксономию"
