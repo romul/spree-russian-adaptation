@@ -13,6 +13,10 @@ class RussianAdaptationExtension < Spree::Extension
   end
 
   def activate
+    
+    Time::DATE_FORMATS[:date_time24] = "%d.%m.%Y - %H:%M"
+    Time::DATE_FORMATS[:short_date] = "%d.%m.%Y"
+    
     # replace .to_url method provided by stringx gem by .parameterize provided by russian gem
     String.class_eval do
       def to_url
