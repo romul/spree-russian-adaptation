@@ -1,8 +1,7 @@
 ---
 ru-RU:
-  actions:
-    add_to_cart: "Добавить в корзину"
-    add_to_comparison: "Добавить к сравнению" 
+  add_to_comparison: "Добавить к сравнению" 
+  basket_successfully_cleared: "Корзина успешно очищена."
   bestsellers: "Товары месяца"
   coupon_calculator: "Калькулятор скидки"
   editing_payment: "Редактирование платежа"
@@ -10,8 +9,9 @@ ru-RU:
   is_bestseller: "является товаром месяца"
   more: "подробнее&nbsp;&#187;"
   new_payment: "Новый платёж"
-  not_shown: "не показывать"
+  not_shown: "скрыто"
+  searching: "Идёт поиск..."
   second_name: "Отчество"
-  shipments: "Доставки"
+  Shipments: "Доставки"
   shipping_calculator: "Калькулятор"
 
