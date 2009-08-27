@@ -113,7 +113,7 @@ class RussianAdaptationExtension < Spree::Extension
       def text_area(object_name, method, options = {})
         begin
           fckeditor_textarea(object_name, method,
-            :toolbarSet => 'Easy', :width => '100%', :height => '350px')
+            :toolbarSet => 'Spree', :width => '100%', :height => '350px')
         rescue
           super
         end
