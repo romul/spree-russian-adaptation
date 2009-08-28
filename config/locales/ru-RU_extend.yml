@@ -1,8 +1,9 @@
 ---
 ru-RU:
-  add_to_comparison: "Добавить к сравнению" 
+  add_to_comparison: "Добавить к сравнению"
   basket_successfully_cleared: "Корзина успешно очищена."
   bestsellers: "Товары месяца"
+  clear_cache: "Очистить кеш"
   coupon_calculator: "Калькулятор скидки"
   editing_payment: "Редактирование платежа"
   "Edit Taxonomy": "Редактировать таксономию"
