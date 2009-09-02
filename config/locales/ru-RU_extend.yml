@@ -1,10 +1,12 @@
 ---
 ru-RU:
   add_to_comparison: "Добавить к сравнению"
+  already_logged_in: "Вы уже авторизованы."
   basket_successfully_cleared: "Корзина успешно очищена."
   bestsellers: "Товары месяца"
   clear_cache: "Очистить кеш"
   coupon_calculator: "Калькулятор скидки"
+  do_checkout: "Оформить заказ"
   editing_payment: "Редактирование платежа"
   "Edit Taxonomy": "Редактировать таксономию"
   is_bestseller: "является товаром месяца"
@@ -15,4 +17,10 @@ ru-RU:
   second_name: "Отчество"
   Shipments: "Доставки"
   shipping_calculator: "Калькулятор"
+  show_active: "Показать действующие"
+
+  authlogic:
+    error_messages:
+      email_invalid: "должен быть указан в верном формате xxx@xxx.tld"
+      login_invalid: "должен состоять только из латинских букв, цифр и символов: .-_@"
 
