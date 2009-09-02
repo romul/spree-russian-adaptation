@@ -19,10 +19,6 @@
     		<label for="<%= t("street_address") %>"><%= t("street_address") %></label>
     		<%= address.text_field :address1, :class => 'required' -%><span class="req">*</span>
     	</p>
-    	<p id="saddress2">
-    		<label for="<%= t("street_address_2") %>"><%= t("street_address_2") %></label>
-    		<%= address.text_field :address2 %>
-    	</p>
     	<p id="scity">
     		<label for="<%= t("city") %>"><%= t("city") %></label>
     		<%= address.text_field :city, :class => 'required' -%><span class="req">*</span>

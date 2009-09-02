@@ -1,3 +1,17 @@
+// default messages for checkout process
+var I18n = {
+  t: {
+    "error_messages": {
+        "unable_to_register_user":                  "Unable to register user",
+        "unable_to_register_due_server_error":      "Unable to register due to a server error.",
+        "invalid_username_or_password":             "Invalid username or password.",
+        "unable_to_perform_login_due_server error": "Unable to perform login due to a server error.",
+        "unable_to_process_coupon":                 "Server Error: Unable to Process Coupon",
+        "please_select_shipping_method":            "Please select a shipping method",
+    },
+  }
+};
+
 //On page load
 $(function() {        
   $('input#coupon-code').keydown(function(event) { if (event.keyCode == 13) { ajax_coupon(); } });
@@ -84,7 +98,7 @@ var chg_state_input_element = function (parent, html) {
     html.addClass('required')
       .attr('name', name)
       .attr('id',   id);
-  }    
+  }
   child.remove();		// better as parent-relative?
   parent.append(html);
   return html;
@@ -277,7 +291,7 @@ var submit_shipping_method = function() {
     return true;
   } else {
     var p = document.createElement('p');
-    $(p).append($(document.createElement('label')).addClass('error').html('Please select a shipping method').css('width', '300px').css('top', '0px'));
+    $(p).append($(document.createElement('label')).addClass('error').html(I18n.t['error_messages']['please_select_shipping_method']).css('width', '300px').css('top', '0px'));
     $('div#methods').append(p);
     return false;
   }
@@ -287,7 +301,8 @@ var update_shipping_methods = function(methods) {
   $(methods).each( function(i) {
     $('div$methods img#shipping_loader').remove();
     var p = document.createElement('p');
-    var s = this.name;// + ' ' + this.rate;
+    var s = this.name;
+    if (this.rate > 0) s += ' ' + this.rate;
     var i = $(document.createElement('input'))
                 .attr('id', this.id)
                 .attr('type', 'radio')
@@ -374,11 +389,11 @@ var ajax_login = function() {
         update_addresses(result);
         update_login();
       } else {
-        registration_error("Invalid username or password.");
+        registration_error(I18n.t['error_messages']['invalid_username_or_password']);
       };
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
-      registration_error("Unable to perform login due to a server error.");
+      registration_error(I18n.t['error_messages']['unable_to_perform_login_due_server error']);
     }
   });  	
 };
@@ -399,7 +414,7 @@ var ajax_register = function() {
         $('div#register_or_guest').hide();
         update_login();
       } else {                                         
-        var error_msg = "Unable to register user";              
+        var error_msg = I18n.t['error_messages']['unable_to_register_user'];              
         for (var i=0; i < result.length; i++) {
           error_msg += "<br/>";
           error_msg += result[i][0] + ": " + result[i][1];
@@ -408,7 +423,7 @@ var ajax_register = function() {
       };
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
-      registration_error("Unable to register due to a server error.");    
+      registration_error(I18n.t['error_messages']['unable_to_register_due_server_error']);    
     }
   });  	
 };
@@ -525,7 +540,7 @@ var ajax_coupon = function() {
       update_confirmation(json);
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
-      $('div#coupon-error').addClass('error').html("Server Error: Unable to Process Coupon");
+      $('div#coupon-error').addClass('error').html(I18n.t['error_messages']['unable_to_process_coupon']);
     }
   });  	
 };
