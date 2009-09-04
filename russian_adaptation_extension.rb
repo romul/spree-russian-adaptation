@@ -109,7 +109,9 @@ class RussianAdaptationExtension < Spree::Extension
           "#{rub}&nbsp;p."
         end
       end
-
+    end
+    
+    Admin::BaseHelper.module_eval do 
       def text_area(object_name, method, options = {})
         begin
           fckeditor_textarea(object_name, method,
@@ -117,7 +119,7 @@ class RussianAdaptationExtension < Spree::Extension
         rescue
           super
         end
-      end
+      end      
     end
 
     ResourceController::Controller.module_eval do 
