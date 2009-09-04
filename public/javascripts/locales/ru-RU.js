@@ -6,7 +6,7 @@
         "invalid_username_or_password":             "Неправильный логин или пароль.",
         "unable_to_perform_login_due_server error": "Не удалось авторизоваться из-за ошибки на сервере.",
         "unable_to_process_coupon":                 "Не удалось применить купон на скидку.",
-        "please_select_shipping_method":            "Пожалуйста, выберите метод доставки.",
-    },
+        "please_select_shipping_method":            "Пожалуйста, выберите метод доставки."
+    }
   }
 };

@@ -6,7 +6,7 @@ var I18n = {
         "invalid_username_or_password":             "Invalid username or password.",
         "unable_to_perform_login_due_server error": "Unable to perform login due to a server error.",
         "unable_to_process_coupon":                 "Server Error: Unable to Process Coupon",
-        "please_select_shipping_method":            "Please select a shipping method",
-    },
+        "please_select_shipping_method":            "Please select a shipping method"
+    }
   }
 };
