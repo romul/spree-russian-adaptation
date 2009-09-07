@@ -1,0 +1,11 @@
+payment:
+  sberbank:
+    bik: "000000000"
+    corr: "30100000000000000000"
+    inn: "0000000000"
+    kpp: "000000000"
+    recipient: "ООО «Фирма»"
+    recipient_bank: "ОАО «Банк»"
+    recipient_bank_city: "Москва"
+    settlement_acc: "40700000000000000000"
+
