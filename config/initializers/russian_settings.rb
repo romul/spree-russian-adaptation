@@ -9,3 +9,6 @@ if Spree::Config.instance
 end
 
 PAYMENT_CONFIG = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'settings.yml'))['payment']
+
+
+ActiveMerchant::Billing::Base.mode = (RAILS_ENV == 'production') ? :live : :test
