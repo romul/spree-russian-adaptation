@@ -2,4 +2,4 @@
 log/*.log
 tmp/**/*
 *~
-
+config/settings.yml
