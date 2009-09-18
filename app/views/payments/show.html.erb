@@ -1,0 +1,7 @@
+<div>
+  <div>Счет №<%=@order.number%> </div>
+  <div>Сумма: <%=@order.total%></div>
+  <div>
+    <%= @robo_kassa.payment_button({:invoice => @order.number[1..-1], :summa =>  @order.total, :value => "Оплатить"},{:shpa => "omed"} ) %> 
+  </div>
+</div>

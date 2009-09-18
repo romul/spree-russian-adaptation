@@ -8,4 +8,8 @@ payment:
     recipient_bank: "ОАО «Банк»"
     recipient_bank_city: "Москва"
     settlement_acc: "40700000000000000000"
+  robokassa:
+    login: "login"
+    password1: "pass1"
+    password2: "pass2"    
 
