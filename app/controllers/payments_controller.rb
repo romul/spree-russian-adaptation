@@ -41,8 +41,10 @@ class PaymentsController < Spree::BaseController
   
   def load_order_by_number(number)
     @order = Order.find_by_number(number)
-    flash[:error] = "Заказ с номером #{number} не найден."
-    redirect_to root_url unless @order
+    unless @order
+      flash[:error] = "Заказ с номером #{number} не найден."
+      redirect_to root_url
+    end
   end
   
   def load_robokassa
