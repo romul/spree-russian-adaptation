@@ -4,7 +4,7 @@
 class RussianAdaptationExtension < Spree::Extension
   version "0.1"
   description "Adapts Spree to the Russian reality."
-  url "http://yourwebsite.com/russian_adaptation"
+  url "http://github.com/romul/spree-russian-adaptation"
 
   # Please use russian_adaptation/config/routes.rb instead for extension routes.
 
