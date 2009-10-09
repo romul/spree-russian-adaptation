@@ -1,3 +1,4 @@
+# encoding: utf-8
 # Uncomment this if you reference any of your controllers in activate
 # require_dependency 'application'
 
