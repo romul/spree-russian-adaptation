@@ -1,5 +1,7 @@
 ---
 ru-RU: 
+  'no': "Нет"
+  'yes': "Да"
   a_copy_of_all_mail_will_be_sent_to_the_following_addresses: "Копии всех писем будут отосланы на следующие адреса"
   abbreviation: "Аббревиатура"
   access_denied: "Доступ запрещен"
@@ -167,6 +169,7 @@ ru-RU:
   add_state: "Добавить субъект федерации"
   add_to_cart: "Добавить в корзину"
   add_zone: "Добавить зону"
+  additional_item: Additional Item Cost
   address: "Адрес"
   address_information: "Адресная информация"
   adjustment: "Поправка(Adjustment)"
@@ -196,6 +199,9 @@ ru-RU:
   backordering_is_allowed: "Задолженные заказы {{not}} разрешены"
   bill_address: "Платёжный адрес"
   billing_address: "Платёжный адрес"
+  billing_integration: Billing Integration
+  billing_integrations: Billing Integrations
+  billing_integrations_description: "Configure your settings for third party billing integrations such as Paypal, Google Checkout, etc."
   calculator: "Калькулятор"
   calculator_settings_warning: "При изменении типа калькулятора, вы должны сохранить это изменение, прежде чем вы сможете изменить настройки калькулятора."
   cancel: "Отмена"
@@ -213,6 +219,7 @@ ru-RU:
   charged: "Оплачено"
   checkout: "Оформление заказа"
   city: "Город"
+  clone: "Клонировать"
   code: "Кодовое слово"
   combine: "Разрешить комбинировать"
   comp_order: "(not used) Comp Order"
@@ -252,6 +259,7 @@ ru-RU:
   destroy: "Удалить"
   display: "Показать"
   edit: "Редактировать"
+  editing_billing_integration: Editing Billing Integration
   editing_category: "Редактирование категории"
   editing_coupon: "Редактировать купон"
   editing_option_type: "Редактирование опции"
@@ -271,6 +279,8 @@ ru-RU:
   email_address: "Email адрес"
   email_server_settings_description: "Настройки сервера email."
   empty_cart: "Очистить корзину"
+  enable_login_via_login_password: "Авторизоваться с помощью пары email/пароль"  
+  enable_login_via_openid: "Авторизоваться с помощью OpenID"
   enable_mail_delivery: "Включить доставку почты"
   enable_mail_queue: "Включить очередь почтовых сообщений"
   enter_exactly_as_shown_on_card: "Пожалуйста, введите точно как показано на карте"
@@ -284,6 +294,7 @@ ru-RU:
   extensions: "Расширения"
   filename: "Имя файла"
   final_confirmation: "Окончательное подтверждение"
+  first_item: First Item Cost
   first_name: "Имя"
   flat_percent: "Фиксированный процент"
   flat_rate_amount: "Сумма фиксированной ставки"
@@ -315,6 +326,7 @@ ru-RU:
   images: "Картинки"
   images_for: "Картинки для"
   in_progress: "В процессе"
+  integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   invalid_search: "Неверный критерий поиска."
   inventory: "Ассортимент "
   inventory_adjustment: "Управление ассортиментом"
@@ -342,6 +354,7 @@ ru-RU:
   login_failed: "Вход не выполнен."
   login_name: "Логин"
   logout: "Выйти"
+  look_for_similar_items: Look for similar items
   maestro_or_solo_cards: "Кредитные карты Maestro/Solo"
   mail_delivery_enabled: "Доставка почты включена"
   mail_delivery_not_enabled: "Доставка почты не включена"
@@ -351,14 +364,17 @@ ru-RU:
   mail_server_settings: "Установки почтового сервера"
   mark_shipped: "Отметить как доставленный"
   master_price: "Основная цена"
+  max_items: Max Items
   meta_description: "Описание"
   meta_keywords: "Ключевые слова"
   metadata: "Метаданные"
+  missing_required_information: "Missing Required Information"
   month: "Месяц"
   my_account: "Моя учетная запись"
   my_orders: "Мои заказы"
   name: "Название"
   new: "Новый"
+  new_billing_integration: New Billing Integration
   new_category: "Новая категория"
   new_coupon: "Новый купон"
   new_credit_card_payment: "Новый платеж по кредитной карте"
@@ -367,6 +383,7 @@ ru-RU:
   new_option_type: "Новая опция"
   new_option_value: "Новое значение опции"
   new_product: "Новый продукт"
+  new_product_group: New Product Group
   new_property: "Новое свойство"
   new_prototype: "Новый прототип"
   new_shipment: "Новая доставка"
@@ -382,7 +399,6 @@ ru-RU:
   new_variant: "Новый вариант"
   new_zone: "Новая зона"
   next: "след."
-  no: "Нет"
   no_items_in_cart: ""
   no_match_found: "Совпадений не найдено"
   no_user_found: "Пользователь с таким адресом email у нас не числится."
@@ -406,6 +422,7 @@ ru-RU:
   order_operation_authorize: "Авторизовать"
   order_processed_successfully: "Ваш заказ был успешно обработан"
   order_summary: "Сводка по заказу"
+  order_sure_want_to: "Вы уверены, что хотите {{event}} этот заказ?"
   order_total: "Итого заказ"
   order_total_message: "Полная сумма, снятая с вашей карточки, составит"
   order_updated: "Заказ обновлен"
@@ -432,8 +449,10 @@ ru-RU:
   please_create_user: "Пожалуйста, создайте учётную запись."
   powered_by: "Работает на"
   presentation: "Отображение"
+  preview: Preview
   previous: "пред."
   price: "Цена"
+  price_with_vat_included: "{{price}} (вкл. НДС)"
   problem_authorizing_card: "Проблема при авторизации Вашей кредитной карты"
   problem_capturing_card: "Проблема при capture Вашей кредитной карты"
   problems_processing_order: "При обработке Вашего заказа возникли проблемы"
@@ -441,8 +460,121 @@ ru-RU:
   process: "Обработать"
   product: "Продукт"
   product_details: "Описание продукта"
+  product_group: Product Group
+  product_group_invalid: Product Group has invalid scopes
+  product_groups: Product Groups
   product_has_no_description: "У данного продукта нет описания."
   product_properties: "Свойства продукта"
+  product_scopes:
+    groups:
+      price:
+        description: "Scopes for selecting products based on Price"
+        name: Price
+      search:
+        description: "Scopes for selecting products based on name, keywords and description of product"
+        name: "Text search"
+      taxon:
+        description: "Scopes for selecting products based on Taxons"
+        name: Taxon
+      values:
+        description: "Scopes for selecting products based on option and property values"
+        name: Values
+    scopes:
+      ascend_by_master_price:
+        name: Ascend by product master price
+      ascend_by_name:
+        name: Ascend by product name
+      ascend_by_updated_at:
+        name: Ascendy by actualization date
+      by_popularity:
+        name: Sort by popularity(most popular first)
+      descend_by_master_price:
+        name: Descend by product master price
+      descend_by_name:
+        name: Descend by product name
+      descend_by_updated_at:
+        name: Descend by actualization date
+      in_name:
+        args:
+          words: Words
+        description: "(separated by space or comma)"
+        name: "Product name have following"
+        sentence: product name contain <em>%s</em>
+      in_name_or_description:
+        args:
+          words: Words
+        description: "(separated by space or comma)"
+        name: "Product name or description have following"
+        sentence: name or description contain <em>%s</em>
+      in_name_or_keywords:
+        args:
+          words: Words
+        description: "(separated by space or comma)"
+        name: "Product name or meta heywords have following"
+        sentence: name or keywords contain <em>%s</em>
+      in_taxons:
+        args:
+          "taxon_names": "Taxon names"
+        description: "Taxon names have to be separated by comma or space(eg. adidas,shoes)"
+        name: "In taxons and all their descendants"
+        sentence: in <em>%s</em> and all their descendants
+      master_price_gte:
+        args:
+          amount: Amount
+        description: ""
+        name: "Master price greater or equal to"
+        sentence: price greater or equal to <em>%.2f</em>
+      master_price_lte:
+        args:
+          amount: Amount
+        description: ""
+        name: "Master price lesser or equal to"
+        sentence: price less or equal to <em>%.2f</em>
+      price_between:
+        args:
+          high: High
+          low: Low
+        description: ""
+        name: "Price between"
+        sentence: price between <em>%.2f</em> and <em>%.2f</em>
+      taxons_name_eq:
+        args:
+          taxon_name: "Taxon name"
+        description: "In specific taxon - without descendants"
+        name: "In Taxon(without descendants)"
+        sentence: in <em>%s</em>
+      with:
+        args:
+          value: Value
+        description: "Selects all products that have at least one variant that have specified value as either option or property (eg. red)"
+        name: With value
+        sentence: with value <em>%s</em>
+      with_option:
+        args:
+          option: Option
+        description: "Selects all products that have specified option(eg. color)"
+        name: "With option"
+        sentence: with option <em>%s</em>
+      with_option_value:
+        args:
+          option: Option
+          value: Value
+        description: "Selects all products that have at least one variant with specified option and value(eg. color:red)"
+        name: "With option and value"
+        sentence: with option <em>%s</em> and value <em>%s</em>
+      with_property:
+        args:
+          property: Property
+        description: "Selects all products that have specified property(eg. weight)"
+        name: "With property"
+        sentence: with property <em>%s</em>
+      with_property_value:
+        args:
+          property: Property
+          value: Value
+        description: "Selects all products that have at least one variant with specified property and value(eg. weight:10kg)"
+        name: "With property value"
+        sentence: with property <em>%s</em> and value <em>%s</em>
   products: "Продукты"
   products_with_zero_inventory_display: "Отсутсвующие товары {{not}} будут отображаться"
   properties: "Свойства"
@@ -460,6 +592,11 @@ ru-RU:
   required_for_solo_and_maestro: "Обязательно для кредитных карт Solo и Maestro."
   resend: "Отослать повторно"
   reset_password: "Сбросить мой пароль"
+  resource_controller:
+    member_object_not_found: "Запрашиваемая запись не найдена."
+    successfully_created: "Запись успешно создана!"
+    successfully_removed: "Запись успешно удалена!"
+    successfully_updated: "Запись успешно обновлена!"
   response_code: "Response Code"
   resume: "возобновить"
   resumed: "Возобновлен"
@@ -473,6 +610,7 @@ ru-RU:
   sales_totals_description: "итоги продаж для всех заказов."
   save_preferences: "Сохранить настройки"
   search: "Поиск"
+  search_results: "Результаты поиска по запросу '{{keywords}}'"
   secure_connection_type: "Тип защищенного соединения"
   select: "Выбрать"
   select_from_prototype: "Выбрать из прототипов"
@@ -504,6 +642,7 @@ ru-RU:
   shipping_total: "Доставка"
   shop_by_taxonomy: "{{taxonomy}}"
   shopping_cart: "Корзина"
+  show: "Показать"
   show_deleted: "Показать удаленные"
   show_incomplete_orders: "Показать необработанные заказы"
   show_only_complete_orders: "Показывать только обработанные заказы"
@@ -587,6 +726,7 @@ ru-RU:
   use_different_shipping_address: "использовать другой адрес доставки"
   user: "Пользователь"
   user_account: "Учетная запись пользователя"
+  user_created_successfully: "Учётная запись успешно создана"
   user_details: "Дополнительно"
   users: "Пользователи"
   value: "Значение"
@@ -601,7 +741,6 @@ ru-RU:
   whats_this: "Что это"
   width: "Ширина"
   year: "Год"
-  yes: "Да"
   you_have_been_logged_out: "Вы вышли из системы. До свидания!"
   your_cart_is_empty: "Ваша корзина пуста"
   zip: "Индекс"

@@ -123,47 +123,6 @@ class RussianAdaptationExtension < Spree::Extension
       end      
     end
 
-    ResourceController::Controller.module_eval do 
-      private
-      def self.init_default_actions(klass)
-        klass.class_eval do
-          index.wants.html
-          edit.wants.html
-          new_action.wants.html
-
-          show do
-            wants.html
-
-            failure.wants.html { render :text => "Запрашиваемая запись не найдена." }
-          end
-
-          create do
-            flash "Запись успешно создана!"
-            wants.html { redirect_to object_url }
-
-            failure.wants.html { render :action => "new" }
-          end
-
-          update do
-            flash "Запись успешно обновлена!"
-            wants.html { redirect_to object_url }
-
-            failure.wants.html { render :action => "edit" }
-          end
-
-          destroy do
-            flash "Запись успешно удалена!"
-            wants.html { redirect_to collection_url }
-          end
-          
-          class << self
-            def singleton?
-              false
-            end
-          end
-        end
-      end            
-    end
     # admin.tabs.add "Russian Adaptation", "/admin/russian_adaptation", :after => "Layouts", :visibility => [:all]
   end
 end
