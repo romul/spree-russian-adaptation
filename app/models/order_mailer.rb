@@ -1,9 +1,10 @@
+# encoding: utf-8
 class OrderMailer < ActionMailer::Base
   helper "spree/base"
   
   def confirm(order, resend = false)
     @subject    = (resend ? "[RESEND] " : "") 
-    @subject    += Spree::Config[:site_name] + ' :: ' + 'Уведомление о заказе #' + order.number
+    @subject    += Spree::Config[:site_name] + ' :: Уведомление о заказе #' + order.number
     @body       = {"order" => order}
     @recipients = order.email
     @from       = Spree::Config[:order_from]
