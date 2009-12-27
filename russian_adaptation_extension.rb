@@ -25,53 +25,6 @@ class RussianAdaptationExtension < Spree::Extension
       end
    	end
 
-    CheckoutsController.class_eval do
-
-      update.failure do
-        flash "Возникла непредвиденная ошибка!"
-      end
-
-      update.before do
-        # update user to current one if user has logged in
-        @order.update_attribute(:user, current_user) if current_user
-
-        if (checkout_info = params[:checkout]) and not checkout_info[:coupon_code]
-          # overwrite any earlier guest checkout email if user has since logged in
-          checkout_info[:email] = current_user.email if current_user
-
-          # and set the ip_address to the most recent one
-          checkout_info[:ip_address] = request.env['REMOTE_ADDR']
-
-          set_address(@checkout.bill_address,
-                      checkout_info[:bill_address_attributes],
-                      current_user ? current_user.bill_address : nil)
-
-          set_address(@order.shipment.address,
-                      checkout_info[:shipment_attributes][:address_attributes],
-                      current_user ? current_user.ship_address : nil)
-        end
-        @order.complete! unless params[:final_answer].blank?
-      end
-
-      private
-
-        def set_address(current_address, address_params, current_user_address)
-            # check whether the address has changed, and start a fresh record if
-            # we were using the address stored in the current user.
-            if address_params and current_address
-              # always include the id of the record we must write to - ajax can't refresh the form
-              address_params[:id] = current_address.id
-              new_address = Address.new address_params
-              if not current_address.same_as?(new_address) and
-                   current_user and current_address == current_user_address
-                # need to start a new record, so replace the existing one with a blank
-                address_params.delete :id
-                current_address = Address.new
-              end
-            end
-        end
-
-    end
 
     OrdersController.class_eval do
       def sberbank_billing
@@ -81,27 +34,33 @@ class RussianAdaptationExtension < Spree::Extension
           flash[:notice] = 'Счёт не найден.'
           redirect_to root_path
         end
-      end
-      
-      #override r_c default b/c we don't want to actually destroy, we just want to clear line items
-      def destroy
-        flash[:notice] = I18n.t(:basket_successfully_cleared)
-        @order.line_items.clear
-        @order.update_totals!
-        after :destroy
-        response_for :destroy
-      end
+      end     
     end
 
 
     Checkout.class_eval do
+      validation_group :address, :fields=> [
+      "shipment.address.firstname", "shipment.address.lastname", "shipment.address.phone", 
+      "shipment.address.zipcode", "shipment.address.state", "shipment.address.lastname", 
+      "shipment.address.address1", "shipment.address.city", "shipment.address.statename", 
+      "shipment.address.zipcode", "shipment.address.secondname"]
+  
       def bill_address
         shipment ? shipment.address : Address.default
       end
     end
+    
+    Checkout.state_machines[:state] =
+        StateMachine::Machine.new(Checkout, :initial => 'address') do
+          after_transition :to => 'complete', :do => :complete_order   
+          event :next do
+            transition :to => 'delivery', :from  => 'address'
+            transition :to => 'complete', :from => 'delivery'
+          end
+        end
 
     Spree::BaseHelper.module_eval do
-      def number_to_currency(number)
+      def number_to_currency(number, options = {})
         rub = number.to_i
         kop = ((number - rub)*100).round.to_i
         if (kop > 0)
