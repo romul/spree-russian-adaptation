@@ -38,13 +38,13 @@ ru-RU:
           zipcode: "Billing address zipcode"
         shipment:
           address:
-            address1: "Shipping address street"
-            city: "Shipping address city"
-            firstname: "Shipping address first name"
-            lastname: "Shipping address last name"
-            phone: "Shipping address phone"
-            state: "Shipping address state"
-            zipcode: "Shipping address zipcode"
+            address1: "Адрес доставки. Улица"
+            city: "Адрес доставки. Город"
+            firstname: "Адрес доставки. Имя"
+            lastname: "Адрес доставки. Фамилия"
+            phone: "Адрес доставки. Телефон"
+            state: "Адрес доставки. Регион/Область"
+            zipcode: "Адрес доставки. Индекс"
       country:
         iso: "ISO"
         iso3: "ISO3"
