@@ -40,10 +40,10 @@ class RussianAdaptationExtension < Spree::Extension
 
     Checkout.class_eval do
       validation_group :address, :fields=> [
-      "shipment.address.firstname", "shipment.address.lastname", "shipment.address.phone", 
-      "shipment.address.zipcode", "shipment.address.state", "shipment.address.lastname", 
-      "shipment.address.address1", "shipment.address.city", "shipment.address.statename", 
-      "shipment.address.zipcode", "shipment.address.secondname"]
+      "ship_address.firstname", "ship_address.lastname", "ship_address.phone", 
+      "ship_address.zipcode", "ship_address.state", "ship_address.lastname", 
+      "ship_address.address1", "ship_address.city", "ship_address.statename", 
+      "ship_address.zipcode", "ship_address.secondname"]
   
       def bill_address
         ship_address || Address.default
