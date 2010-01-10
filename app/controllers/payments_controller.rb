@@ -48,8 +48,7 @@ class PaymentsController < Spree::BaseController
   end
   
   def load_robokassa
-    robo_settings = PAYMENT_CONFIG['robokassa'].symbolize_keys
-    @robo_kassa = ActiveMerchant::Billing::RoboKassaGateway.new(robo_settings)
+    @robo_kassa = Gateway.current.provider
   end
 
 end

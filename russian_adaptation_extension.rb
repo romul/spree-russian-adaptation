@@ -18,6 +18,9 @@ class RussianAdaptationExtension < Spree::Extension
     Time::DATE_FORMATS[:date_time24] = "%d.%m.%Y - %H:%M"
     Time::DATE_FORMATS[:short_date] = "%d.%m.%Y"
     
+    require "active_merchant/billing/gateways/robo_kassa"
+    Gateway::RoboKassa.register
+    
     # replace .to_url method provided by stringx gem by .parameterize provided by russian gem
     String.class_eval do
       def to_url
@@ -37,6 +40,11 @@ class RussianAdaptationExtension < Spree::Extension
       end     
     end
 
+    Gateway.class_eval do
+      def self.current
+        self.first :conditions => ["environment = ? AND active = ?", RAILS_ENV, true]
+      end
+    end
 
     Checkout.class_eval do
       validation_group :address, :fields=> [
