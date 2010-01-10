@@ -46,7 +46,7 @@ class RussianAdaptationExtension < Spree::Extension
       "shipment.address.zipcode", "shipment.address.secondname"]
   
       def bill_address
-        shipment ? shipment.address : Address.default
+        ship_address || Address.default
       end
     end
     
@@ -59,7 +59,7 @@ class RussianAdaptationExtension < Spree::Extension
           end
         end
 
-    Spree::BaseHelper.module_eval do
+    ActionView::Helpers::NumberHelper.module_eval do
       def number_to_currency(number, options = {})
         rub = number.to_i
         kop = ((number - rub)*100).round.to_i
