@@ -6,6 +6,7 @@ if Spree::Config.instance
   Spree::Config.set(:default_locale => :'ru-RU')
   Spree::Config.set(:default_country_id => 168)
   Spree::Config.set(:auto_capture => false)
+  Spree::Config.set(:ship_form_requires_state => true)
 end
 
 begin
