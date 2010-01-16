@@ -1,5 +1,5 @@
 <fieldset id='shipping-ship_form'>
-  <% checkout_form.fields_for :ship_ship_form do |ship_form| %>
+  <% checkout_form.fields_for :ship_address do |ship_form| %>
     <legend><%= t("shipping_address")%></legend>
     <div class="inner">
       <p id="slname" class="field">
@@ -55,12 +55,12 @@
         <%= ship_form.text_field :city, :class => 'required' -%><span class="req">*</span>
       </p>
       <p id="sship_form" class="field">
-        <%= ship_form.label :ship_form1, t(:street_address) %><br />
-        <%= ship_form.text_field :ship_form1, :class => 'required' -%><span class="req">*</span>
+        <%= ship_form.label :address1, t(:street_address) %><br />
+        <%= ship_form.text_field :address1, :class => 'required' -%><span class="req">*</span>
       </p>
       <p id="sship_form2" class="field">
-        <%= ship_form.label :ship_form2, t(:street_address_2) %><br />
-        <%= ship_form.text_field :ship_form2 %>
+        <%= ship_form.label :address2, t(:street_address_2) %><br />
+        <%= ship_form.text_field :address2 %>
       </p>
       <p id="sphone" class="field">
         <%= ship_form.label :phone, t(:phone) %><br />
