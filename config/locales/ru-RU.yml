@@ -101,6 +101,8 @@ ru-RU:
         name: "Наименование"
       user:
         email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
       variant:
         depth: "Глубина"
         height: "Высота"
@@ -245,6 +247,7 @@ ru-RU:
   category: "Категория"
   change: "Изменить"
   change_language: "Сменить язык"
+  change_my_password: "Сменить мой пароль"
   charge_total: "Итого оплачено"
   charged: "Оплачено"
   charges: Charges
@@ -368,6 +371,7 @@ ru-RU:
   images: "Картинки"
   images_for: "Картинки для"
   in_progress: "В процессе"
+  instructions_to_reset_password: "Пожалуйста, заполните форму чтобы мы выслали вам инструкции по смене пароля:"
   integration_settings_warning: "Если вы меняете платежную систему, то необходимо сохранить данное изменение, только после этого вы сможете редактировать параметры интеграции"
   invalid_search: "Неверный критерий поиска."
   inventory: "Ассортимент "
