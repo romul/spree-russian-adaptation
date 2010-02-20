@@ -416,3 +416,129 @@ states_89:
   country_id: <%= country_id %>
   abbr: "RU-YAN"
 
+<% country_id = 211 %>
+states_90:
+  id: 90
+  name: "Автономная Республика Крым"
+  country_id: <%= country_id %>
+  abbr: "UA-CR"
+states_91:
+  id: 91
+  name: "Винницкая область"
+  country_id: <%= country_id %>
+  abbr: "UA-VI"
+states_92:
+  id: 92
+  name: "Волынская область"
+  country_id: <%= country_id %>
+  abbr: "UA-VL"
+states_93:
+  id: 93
+  name: "Днепропетровская область"
+  country_id: <%= country_id %>
+  abbr: "UA-DP"
+states_94:
+  id: 94
+  name: "Донецкая область"
+  country_id: <%= country_id %>
+  abbr: "UA-DN"
+states_95:
+  id: 95
+  name: "Житомирская область"
+  country_id: <%= country_id %>
+  abbr: "UA-ZT"
+states_96:
+  id: 96
+  name: "Закарпатская область"
+  country_id: <%= country_id %>
+  abbr: "UA-ZK"
+states_97:
+  id: 97
+  name: "Запорожская область"
+  country_id: <%= country_id %>
+  abbr: "UA-ZP"
+states_98:
+  id: 98
+  name: "Ивано-Франковская область"
+  country_id: <%= country_id %>
+  abbr: "UA-IF"
+states_99:
+  id: 99
+  name: "Киевская область"
+  country_id: <%= country_id %>
+  abbr: "UA-KV"
+states_100:
+  id: 100
+  name: "Кировоградская область"
+  country_id: <%= country_id %>
+  abbr: "UA-KR"
+states_101:
+  id: 101
+  name: "Луганская область"
+  country_id: <%= country_id %>
+  abbr: "UA-LG"
+states_102:
+  id: 102
+  name: "Львовская область"
+  country_id: <%= country_id %>
+  abbr: "UA-LV"
+states_103:
+  id: 103
+  name: "Николаевская область"
+  country_id: <%= country_id %>
+  abbr: "UA-MK"
+states_104:
+  id: 104
+  name: "Одесская область"
+  country_id: <%= country_id %>
+  abbr: "UA-OD"
+states_105:
+  id: 105
+  name: "Полтавская область"
+  country_id: <%= country_id %>
+  abbr: "UA-PL"
+states_106:
+  id: 106
+  name: "Ровенская область"
+  country_id: <%= country_id %>
+  abbr: "UA-RV"
+states_107:
+  id: 107
+  name: "Сумская область"
+  country_id: <%= country_id %>
+  abbr: "UA-SM"
+states_108:
+  id: 108
+  name: "Тернопольская область"
+  country_id: <%= country_id %>
+  abbr: "UA-TE"
+states_109:
+  id: 109
+  name: "Харьковская область"
+  country_id: <%= country_id %>
+  abbr: "UA-KH"
+states_110:
+  id: 110
+  name: "Херсонская область"
+  country_id: <%= country_id %>
+  abbr: "UA-KR"
+states_111:
+  id: 111
+  name: "Хмельницкая область"
+  country_id: <%= country_id %>
+  abbr: "UA-KM"
+states_112:
+  id: 112
+  name: "Черкасская область"
+  country_id: <%= country_id %>
+  abbr: "UA-CK"
+states_113:
+  id: 113
+  name: " Черниговская область"
+  country_id: <%= country_id %>
+  abbr: "UA-CN"
+states_114:
+  id: 114
+  name: "Черновицкая область"
+  country_id: <%= country_id %>
+  abbr: "UA-CV"
