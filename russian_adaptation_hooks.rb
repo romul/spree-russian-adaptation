@@ -5,6 +5,6 @@ class RussianAdaptationHooks < Spree::ThemeSupport::HookListener
   end
   
   insert_after :admin_inside_head do
-    %(<%= javascript_include_tag :fckeditor %>) if defined?(Fckeditor)
+    %(<%= javascript_include_tag :ckeditor %>) if defined?(Ckeditor)
   end
 end

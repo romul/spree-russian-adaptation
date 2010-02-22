@@ -15,7 +15,7 @@ This extension adapts Spree to the Russian reality.
 * Модифицирует процесс оформления заказа
 * Добавляет распечатку квитанции Сбербанка для оплаты заказа (настройки в `config/settings.yml`)
 * Локализует javascript-файлы, такие как `taxonomy.js`
-* Подменяет все вызовы хелпера text_area на fckeditor_textarea (требуется установка плагина easy-fckeditor)
+* Подменяет все вызовы хелпера text_area на ckeditor_textarea (требуется установка плагина rails-ckeditor)
 * Вывод цен в российском формате
 * Возможность оплаты заказов через RoboKassa
 * Замещает конфигурационные данные при `rake db:bootstrap` на российские.

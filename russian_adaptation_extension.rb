@@ -82,8 +82,7 @@ class RussianAdaptationExtension < Spree::Extension
     Admin::BaseHelper.module_eval do 
       def text_area(object_name, method, options = {})
         begin
-          fckeditor_textarea(object_name, method,
-            :toolbarSet => 'Spree', :width => '100%', :height => '350px')
+          ckeditor_textarea(object_name, method, :width => '100%', :height => '350px')
         rescue
           super
         end
