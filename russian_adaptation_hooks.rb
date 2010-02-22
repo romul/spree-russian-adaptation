@@ -4,4 +4,7 @@ class RussianAdaptationHooks < Spree::ThemeSupport::HookListener
     %(<link type="text/css" rel="stylesheet" media="screen" href="/stylesheets/screen.ext.css">)
   end
   
+  insert_after :admin_inside_head do
+    %(<%= javascript_include_tag :fckeditor %>) if defined?(Fckeditor)
+  end
 end
