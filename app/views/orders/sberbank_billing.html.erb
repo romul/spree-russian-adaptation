@@ -25,7 +25,7 @@ margin:3px 0 10px;}
 </header>
 <body>
 <table cellpadding="3" class="kvit">
-<% sbstgs = PAYMENT_CONFIG['sberbank'].symbolize_keys %>
+<% sbstgs = RUSSIAN_CONFIG['sberbank']['payment'].symbolize_keys %>
 <% 2.times do %>
   <tr>
     <td align="left" width="230" class="dashed">

@@ -72,9 +72,9 @@ class RussianAdaptationExtension < Spree::Extension
         rub = number.to_i
         kop = ((number - rub)*100).round.to_i
         if (kop > 0)
-          "#{rub}&nbsp;p.&nbsp;#{'%.2d' % kop}&nbsp;коп.".mb_chars
+          "#{rub}&nbsp;#{RUSSIAN_CONFIG['country']['currency']}&nbsp;#{'%.2d' % kop}&nbsp;коп.".mb_chars
         else
-          "#{rub}&nbsp;p.".mb_chars
+          "#{rub}&nbsp;#{RUSSIAN_CONFIG['country']['currency']}".mb_chars
         end
       end
     end

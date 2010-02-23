@@ -13,8 +13,8 @@ payment:
     password1: "pass1"
     password2: "pass2"
 country:
-  id: "168"
-  name: "Россия"
-  description: "Российская Федерация"
-  currency: "р."
-  timezone: "Moscow"
+  id: "211"
+  name: "Украина"
+  description: "Украина"
+  currency: "грн."
+  timezone: "Kyev"

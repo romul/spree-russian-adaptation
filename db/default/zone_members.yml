@@ -1,6 +1,6 @@
 --- 
 zone_members_01: 
-  zoneable_id: "168"
+  zoneable_id: "<%= RUSSIAN_CONFIG['country']['id'] %>"
   created_at: <%= Time.zone.now.to_s(:db) %>
   updated_at: <%= Time.zone.now.to_s(:db) %>
   zone_id: "1"

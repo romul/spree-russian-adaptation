@@ -1,8 +1,7 @@
 --- 
 zones_001: 
-  name: "РФ"
+  name: "<%= RUSSIAN_CONFIG['country']['name'] %>"
   created_at: <%= Time.zone.now.to_s(:db) %>
   updated_at: <%= Time.zone.now.to_s(:db) %>
   id: "1"
-  description: "Российская Федерация"
-
+  description: "<%= RUSSIAN_CONFIG['country']['description'] %>"
