@@ -15,3 +15,8 @@ if Spree::Config.instance
 end
 
 ActiveMerchant::Billing::Base.mode = (RAILS_ENV == 'production') ? :live : :test
+
+
+require 'action_controller/mime_type'
+require 'prawn'
+Mime::Type.register 'application/pdf', :pdf
