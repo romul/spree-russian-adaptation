@@ -1,3 +1,6 @@
+invoice:
+  company_name: "Интернет-магазин Фирма"
+  logo: "images/admin/bg/spree_50.png"
 payment:
   sberbank:
     bik: "000000000"

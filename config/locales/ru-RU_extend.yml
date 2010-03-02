@@ -18,6 +18,7 @@ ru-RU:
   Shipments: "Доставки"
   shipping_calculator: "Калькулятор"
   show_active: "Показать действующие"
+  invoice: "Накладная"
 
   authlogic:
     error_messages:

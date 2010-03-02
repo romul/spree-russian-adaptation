@@ -6,6 +6,7 @@ end
 
 Time.zone = RUSSIAN_CONFIG['country']['timezone']
 I18n.default_locale = :'ru-RU'
+
 if Spree::Config.instance
   Spree::Config.set(:default_locale => :'ru-RU')
   Spree::Config.set(:default_country_id => RUSSIAN_CONFIG['country']['id'])
